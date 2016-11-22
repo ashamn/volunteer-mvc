@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
+<link rel="stylesheet" type="text/css" href="/volunteer_tracker/resources/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/volunteer_tracker/resources/css/bootstrap-table.min.css">
+<link rel="stylesheet" type="text/css" href="/volunteer_tracker/resources/css/bootstrap-datepicker3.min.css">
+<link rel="stylesheet" type="text/css" href="/volunteer_tracker/resources/css/sweetalert2.min.css">
+<link rel="stylesheet" type="text/css" href="/volunteer_tracker/resources/css/style.css">
+
+<title>Volunteers</title>
+</head>
+<body>
+	<div class="container-fluid">
+			<div class="head"><p class="headings text-center">Volunteer Registry</p></div>
+
+		<div class="container-fluid">
+			<div class="row">
+			    <div id="toolbar">
+			        <button id="delete" class="btn btn-danger" disabled>
+			            <i class="glyphicon glyphicon-trash"></i> Delete
+			        </button>
+			         <button id="add" class="btn btn-success add">
+			            <i class="glyphicon glyphicon-plus-sign"></i> Add
+			        </button>
+			    </div>
+			    
+			</div>
+		    <div class="row">
+				<table id="table" 
+					data-toolbar="#toolbar" 
+					data-pagination="true" 
+					data-search="true" 
+					data-show-refresh="true"
+					data-id-field="id"
+					data-page-list="[10, 25, 50, 100, ALL]">
+					<thead>
+						<tr>
+							<th data-checkbox="true"></th>
+							<th data-field="id" data-sortable="true">ID</th>
+							<th data-field="firstName" data-sortable="true">First Name</th>
+							<th data-field="lastName" data-sortable="true">Last Name</th>
+							<th data-field="age" data-sortable="true">Age</th>
+							<th data-field="gender" data-sortable="true">Gender</th>
+							<th data-field="email" data-sortable="true">Email</th>
+							<th data-field="mobile_number" data-sortable="true">Mobile Number</th>
+							<th data-field="dateStarted" data-sortable="true">Date Started</th>
+							<th data-field="status" data-sortable="true">Status</th>
+							<th data-field="operate" data-formatter="operateFormatter" data-title="Action" data-events="operateEvents"></th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+		</div>
+			
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			    <form>
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="myModalLabel">Edit Form</h4>
+			      </div>
+			      <div class="modal-body row form-horizontal">
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        <button type="submit" class="btn btn-primary save">Save</button>
+			      </div>
+			      </form>
+			    </div>
+			  </div>
+			</div>
+
+
+	</div>
+	
+			
+
+</body>
+
+
+<script src="/volunteer_tracker/resources/js/jquery-3.0.0.min.js"></script>
+<script src="/volunteer_tracker/resources/js/bootstrap.min.js"></script>
+<script src="/volunteer_tracker/resources/js/bootstrap-table.min.js"></script>
+<script src="/volunteer_tracker/resources/js/bootstrap-table-flat-json.min.js"></script>
+<script src="/volunteer_tracker/resources/js/bootstrap-datepicker.min.js"></script>
+<script src="/volunteer_tracker/resources/js/jquery.validate.min.js"></script>
+<script src="/volunteer_tracker/resources/js/additional-methods.min.js"></script>
+<script src="/volunteer_tracker/resources/js/sweetalert2.min.js"></script>
+<script src="/volunteer_tracker/resources/js/scripts.js"></script>
+
+</html>
